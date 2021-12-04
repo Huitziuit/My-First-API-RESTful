@@ -5,7 +5,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 app.get('/',(req,res)=>{
-    res.send("Hello");
+    res.sendFile(path.join(__dirname+'/html/index.html'));
 })
 
 app.listen(8000,()=>console.log('Servidor corriendo en el puerto 8000'))
